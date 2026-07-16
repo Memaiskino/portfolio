@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Reinis Naļivaiko — Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Portfolio of Reinis Naļivaiko — graphic and motion designer based in Riga, working across print, branding, and motion design.">
+<link rel="canonical" href="https://reinisnalivaiko.me/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Reinis Naļivaiko — Portfolio">
+<meta property="og:description" content="Graphic and motion designer based in Riga, working across print, branding, and motion design.">
+<meta property="og:url" content="https://reinisnalivaiko.me/">
+<meta property="og:image" content="https://reinisnalivaiko.me/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Reinis Naļivaiko — Portfolio">
+<meta name="twitter:description" content="Graphic and motion designer based in Riga, working across print, branding, and motion design.">
+<meta name="twitter:image" content="https://reinisnalivaiko.me/og-image.jpg">
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lekton:wght@400;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #fff; }
+body { font-family: 'Lekton', monospace; color: #000; }
+a { color: #000; }
+a:hover { color: #555; }
+#frame { position: absolute; top: 0; left: 0; transform-origin: 0 0; background: #fff; overflow: hidden; }
+.side { position: absolute; line-height: 100%; }
+#grid { position: absolute; }
+.t { position: absolute; }
+.t img, .t video { display: block; width: 100%; height: 100%; object-fit: cover; }
+/* header positions verbatim from the Figma Desktop frame */
+#name { left: 10px; top: 20px; font-size: 24px; white-space: nowrap; }
+#bio { left: 10px; top: 73px; width: 232px; font-size: 16px; }
+#email { left: 10px; top: 212px; font-size: 16px; white-space: nowrap; }
+/* Figma Mobile frame header */
+body.mobile #name { left: 18px; top: 16px; font-size: 20px; }
+body.mobile #bio { left: 18px; top: 51px; width: 366px; font-size: 14px; }
+body.mobile #email { left: 18px; top: 105px; font-size: 16px; }
+</style>
+</head>
+<body>
+<div id="frame">
+  <span class="side" id="name">Reinis Naļivaiko</span>
+  <span class="side" id="bio">Graphic and motion designer based in Riga, working across print, branding, and motion design.</span>
+  <a class="side" id="email" href="mailto:reinis.nalivaiko@gmail.com">reinis.nalivaiko@gmail.com</a>
+  <div id="grid"></div>
+</div>
+<script>
+// Slot entries: [x, y, w, h, ref] — geometry verbatim from the Figma frames.
+// Each ref is the production asset in assets/final/ — .mp4 renders as a
+// looping video, everything else as an <img>.
+const A = 'assets/final/anim/';
+// Desktop frame (node 1:57): 1920×13707, grid container at x=264
+const DESKTOP = { w: 1920, h: 13707, gx: 264, gy: 0, slots: [
+  [1, 0, 424, 600, 'assets/final/poster1.png'],
+  [436, 0, 605, 340, A + 'v1-0003-b.mp4'],
+  [1065, 27, 286, 286, 'assets/final/visor-ff.png'],
+  [436, 360, 446, 234, 'assets/final/sdr-module.png'],
+  [893, 349, 498, 705, 'assets/final/outdoors.png'],
+  [1, 612, 881, 442, 'assets/final/bru-airport.png'],
+  [1, 1068, 953, 304, 'assets/final/atlas-pro.png'],
+  [967, 1068, 424, 600, 'assets/final/westcredit.png'],
+  [62, 1386, 230, 230, 'assets/final/easy-install.png'],
+  [362, 1386, 230, 230, 'assets/final/portable.png'],
+  [661, 1386, 230, 230, 'assets/final/ready-to-use.png'],
+  [1, 1678, 952, 238, 'assets/final/diversity.png'],
+  [967, 1678, 424, 238, A + 'measurement.mp4'],
+  [1, 1926, 589, 1368, 'assets/final/rollup3.png'],
+  [596, 1927, 795, 447, A + 'v1-0008.mp4'],
+  [596, 2387, 795, 447, A + 'v1-0005.mp4'],
+  [596, 2847, 795, 447, A + 'v1-0011.mp4'],
+  [1, 3307, 1023, 875, 'assets/final/sar-drone.png'],
+  [1030, 3307, 361, 270, 'assets/final/relay-functionality.png'],
+  [1079, 3646, 262, 298, 'assets/final/kalos.png'],
+  [1030, 4011, 361, 171, 'assets/final/nest.png'],
+  [0, 4189, 604, 340, A + 'v1-0001-a.mp4'],
+  [614, 4189, 340, 340, 'assets/final/berlin-food.png'],
+  [1070, 4234, 256, 384, 'assets/final/relay.png'],
+  [1, 4536, 953, 121, 'assets/final/gardening.png'],
+  [1, 4670, 603, 340, 'assets/final/ivs-ma.png'],
+  [638, 4705, 115, 115, 'assets/final/thermal.png'],
+  [638, 4858, 115, 115, 'assets/final/attention-stamp.png'],
+  [786, 4670, 605, 340, A + 'v1-0013.mp4'],
+  [1, 5023, 340, 340, 'assets/final/blog-fraud.png'],
+  [352, 5023, 604, 340, A + 'v1-0004.mp4'],
+  [965, 5023, 340, 340, A + 'japan-web.mp4'],
+  [1, 5376, 183, 103, A + 'distribution.mp4'],
+  [1, 5495, 183, 103, A + 'creativity.mp4'],
+  [1, 5613, 183, 103, A + 'measurement.mp4'],
+  [246, 5402, 123, 123, 'assets/final/aamwa.png'],
+  [431, 5402, 123, 123, 'assets/final/bloop.png'],
+  [246, 5567, 123, 123, 'assets/final/brandsonly.png'],
+  [431, 5567, 123, 123, 'assets/final/dns.png'],
+  [616, 5376, 340, 340, A + 'logo-reveal.mp4'],
+  [967, 5376, 424, 600, 'assets/final/rollup1.png'],
+  [43, 5730, 911, 246, A + 'tdd-innsbruck.mp4'],
+  [1, 5989, 685, 385, A + 'v1-0010.mp4'],
+  [707, 5989, 684, 385, A + 'v1-0009.mp4'],
+  [1, 6391, 424, 600, 'assets/final/rollup2.png'],
+  [493, 6454, 140, 140, 'assets/final/drygin2.png'],
+  [493, 6650, 140, 140, 'assets/final/drygin1.png'],
+  [700, 6428, 691, 388, 'assets/final/grow-giant.png'],
+  [442, 6870, 948, 121, 'assets/final/gardening.png'],
+  [1, 7008, 684, 385, A + 'pride-colors.mp4'],
+  [707, 7008, 684, 385, A + 'v1-0002-a.mp4'],
+  [1, 7415, 1390, 782, A + 'v1-0001-b.mp4'],
+  [1, 8218, 684, 385, A + 'v1-0012.mp4'],
+  [707, 8218, 684, 385, A + 'v1-0001-c.mp4'],
+  [1, 8616, 331, 468, 'assets/final/poster3.png'],
+  [354, 8616, 331, 468, 'assets/final/poster2.png'],
+  [707, 8616, 335, 188, A + 'co2.mp4'],
+  [1056, 8616, 334, 188, A + 'genders.mp4'],
+  [707, 8817, 475, 267, 'assets/final/showgames.png'],
+  [1212, 8817, 150, 115, 'assets/final/proves.png'],
+  [1212, 8942, 150, 142, 'assets/final/transparo.png'],
+  [1, 9100, 684, 368, 'assets/final/blog-ai.png'],
+  [707, 9100, 684, 368, 'assets/final/neon-festival.png'],
+  [1, 9484, 1390, 205, 'assets/final/gardening2.png'],
+  [1, 9705, 1389, 781, A + 'v1-0002-b.mp4'],
+  [1, 10503, 1390, 782, A + 'v1-0004-1500.mp4'],
+  [1, 11303, 1390, 782, A + 'v1-0004-1501.mp4'],
+  [1, 12104, 1390, 782, A + 'v1-0004-1502.mp4'],
+  [1, 12905, 1390, 782, A + 'v1-0004-1503.mp4'],
+]};
+// Mobile frame (node 77:2): 402×14390, grid container at x=-1, y=168
+const MOBILE = { w: 402, h: 14390, gx: -1, gy: 168, slots: [
+  [1.5, 0, 400.7, 567, 'assets/final/poster1.png'],
+  [1.5, 579.3, 400.9, 225.5, A + 'v1-0003-b.mp4'],
+  [1, 817.3, 401.9, 211.5, 'assets/final/sdr-module.png'],
+  [1, 1028, 402, 219, 'assets/final/bru-airport.png'],
+  [87.3, 1299.3, 230.4, 230.4, 'assets/final/visor-ff.png'],
+  [1, 1582.7, 401.6, 568.2, 'assets/final/outdoors.png'],
+  [0, 2186, 404, 129, 'assets/final/atlas-pro.png'],
+  [133, 2333, 141, 141, 'assets/final/portable.png'],
+  [133, 2498, 141, 141, 'assets/final/ready-to-use.png'],
+  [132, 2663, 141, 142, 'assets/final/easy-install.png'],
+  [1, 2845, 402, 226, A + 'v1-0008.mp4'],
+  [1, 3080, 402, 569, 'assets/final/westcredit.png'],
+  [1, 3657, 402, 101, 'assets/final/diversity.png'],
+  [1, 3765, 402, 226, A + 'v1-0005.mp4'],
+  [1, 3998, 402, 226, A + 'v1-0011.mp4'],
+  [1.5, 4236.2, 401.1, 931.5, 'assets/final/rollup3.png'],
+  [1.5, 5201.4, 401.1, 343.1, 'assets/final/sar-drone.png'],
+  [111.2, 5539.3, 173.6, 260.4, 'assets/final/relay.png'],
+  [117.2, 5846.2, 161.8, 184.3, 'assets/final/kalos.png'],
+  [20.5, 6097.3, 363.5, 272, 'assets/final/relay-functionality.png'],
+  [28.4, 6416.2, 347.1, 164.6, 'assets/final/nest.png'],
+  [1, 6635, 402, 226, A + 'v1-0001-a.mp4'],
+  [224, 6870, 179, 179, 'assets/final/berlin-food.png'],
+  [27, 6920, 79, 78, 'assets/final/thermal.png'],
+  [119, 6921, 79, 78, 'assets/final/attention-stamp.png'],
+  [1, 7057, 402, 51, 'assets/final/gardening.png'],
+  [1, 7116, 402, 226, 'assets/final/ivs-ma.png'],
+  [1, 7347.3, 400.9, 225.5, A + 'v1-0013.mp4'],
+  [1, 7579, 402, 402, 'assets/final/blog-fraud.png'],
+  [1, 7988, 402, 402, A + 'japan-web.mp4'],
+  [1, 8397, 402, 226, A + 'v1-0004.mp4'],
+  [1.8, 8630.1, 133.3, 75, A + 'distribution.mp4'],
+  [135.2, 8630.1, 133.3, 75, A + 'measurement.mp4'],
+  [268.5, 8630.1, 133.3, 75, A + 'creativity.mp4'],
+  [38.6, 8744.2, 133.7, 133.7, 'assets/final/brandsonly.png'],
+  [228.7, 8744.2, 133.7, 133.7, 'assets/final/bloop.png'],
+  [38.6, 8931.2, 133.7, 133.7, 'assets/final/aamwa.png'],
+  [228.7, 8931.2, 133.7, 133.7, 'assets/final/dns.png'],
+  [1, 9082, 402, 402, A + 'logo-reveal.mp4'],
+  [1, 9494, 402, 109, A + 'tdd-innsbruck.mp4'],
+  [0.7, 9611, 402, 568, 'assets/final/rollup1.png'],
+  [1, 10188, 402, 226, 'assets/final/grow-giant.png'],
+  [60, 10440, 122, 122, 'assets/final/drygin2.png'],
+  [230, 10440, 122, 122, 'assets/final/drygin1.png'],
+  [1, 10591, 402, 568, 'assets/final/rollup2.png'],
+  [1, 11165, 402, 226, A + 'v1-0010.mp4'],
+  [1, 11399, 402, 51, 'assets/final/gardening.png'],
+  [1.8, 11459.1, 197.9, 111.3, A + 'pride-colors.mp4'],
+  [205.1, 11459.1, 197.9, 111.3, A + 'v1-0002-a.mp4'],
+  [1, 11579, 402, 226, A + 'v1-0009.mp4'],
+  [1, 11813.3, 402, 226.1, A + 'v1-0001-b.mp4'],
+  [1.8, 12045.9, 197.9, 111.3, A + 'v1-0012.mp4'],
+  [205.1, 12046.1, 197.9, 111.3, A + 'v1-0001-c.mp4'],
+  [1, 12165, 198, 280, 'assets/final/poster3.png'],
+  [206, 12165, 198, 280, 'assets/final/poster2.png'],
+  [1, 12450, 201, 113, A + 'co2.mp4'],
+  [202, 12450, 201, 113, A + 'genders.mp4'],
+  [1, 12567.5, 402, 226, 'assets/final/showgames.png'],
+  [52, 12807, 100, 77, 'assets/final/proves.png'],
+  [251, 12807, 101, 77, 'assets/final/transparo.png'],
+  [1, 12897, 198.3, 106.7, 'assets/final/blog-ai.png'],
+  [205.7, 12897, 198.3, 106.7, 'assets/final/neon-festival.png'],
+  [1.2, 13008.3, 402.8, 59.5, 'assets/final/gardening2.png'],
+  [1, 13072.3, 402, 226, A + 'v1-0002-b.mp4'],
+  [1, 13303, 402, 226, A + 'v1-0004-1500.mp4'],
+  [1, 13534, 402, 226, A + 'v1-0004-1501.mp4'],
+  [1, 13765, 402, 226, A + 'v1-0004-1502.mp4'],
+  [1, 13996, 402, 226, A + 'v1-0004-1503.mp4'],
+]};
+const frame = document.getElementById('frame');
+const grid = document.getElementById('grid');
+const mq = window.matchMedia('(max-width: 768px)');
+const io = new IntersectionObserver(es => es.forEach(e => {
+  const v = e.target.querySelector('video');
+  if (v) e.isIntersecting ? v.play().catch(() => {}) : v.pause();
+}), { rootMargin: '200px' });
+let current = null;
+function build(def) {
+  io.disconnect();
+  grid.innerHTML = '';
+  document.body.classList.toggle('mobile', def === MOBILE);
+  frame.style.width = def.w + 'px';
+  frame.style.height = def.h + 'px';
+  grid.style.cssText = `left:${def.gx}px;top:${def.gy}px;width:${def.w + 2}px;height:${def.h - def.gy}px`;
+  for (const [x, y, w, h, ref] of def.slots) {
+    const t = document.createElement('div');
+    t.className = 't';
+    t.style.cssText = `left:${x}px;top:${y}px;width:${w}px;height:${h}px`;
+    if (ref.endsWith('.mp4')) {
+      const v = document.createElement('video');
+      v.muted = true; v.loop = true; v.playsInline = true; v.preload = 'metadata';
+      v.poster = ref.replace('.mp4', '-poster.jpg');
+      const webm = document.createElement('source');
+      webm.src = ref.replace('.mp4', '.webm');
+      webm.type = 'video/webm';
+      v.appendChild(webm);
+      const mp4 = document.createElement('source');
+      mp4.src = ref;
+      mp4.type = 'video/mp4';
+      v.appendChild(mp4);
+      t.appendChild(v);
+      io.observe(t);
+    } else {
+      const img = document.createElement('img');
+      img.src = ref; img.loading = 'lazy'; img.alt = '';
+      t.appendChild(img);
+    }
+    grid.appendChild(t);
+  }
+  current = def;
+}
+function fit() {
+  const def = mq.matches ? MOBILE : DESKTOP;
+  if (def !== current) build(def);
+  const s = Math.min(window.innerWidth / def.w, def === DESKTOP ? 1 : window.innerWidth / def.w);
+  frame.style.transform = `scale(${s})`;
+  document.body.style.height = (def.h * s) + 'px';
+}
+window.addEventListener('resize', fit);
+fit();
+</script>
+</body>
+</html>

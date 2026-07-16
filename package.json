@@ -1,0 +1,11 @@
+{
+  "name": "reinisnalivaiko-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfolio site for reinisnalivaiko.me",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "bash build.sh",
+    "serve": "npx serve dist"
+  }
+}
