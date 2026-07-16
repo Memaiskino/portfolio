@@ -6,6 +6,11 @@
   "scripts": {
     "clean": "rm -rf dist",
     "build": "bash build.sh",
-    "serve": "npx serve dist"
+    "serve": "npx serve dist",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
+  },
+  "devDependencies": {
+    "wrangler": "^4.111.0"
   }
 }
