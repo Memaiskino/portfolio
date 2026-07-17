@@ -48,6 +48,8 @@ a:hover { color: #555; }
 #bio { left: 10px; top: 73px; width: 232px; font-size: 16px; }
 #email { left: 10px; top: 212px; font-size: 16px; white-space: nowrap; }
 /* Figma Mobile frame header */
+/* Opaque band: the mobile grid is full-width from y=168, so tiles scroll under the text */
+body.mobile #header { height: 168px; background: #fff; }
 body.mobile #name { left: 18px; top: 16px; font-size: 20px; }
 body.mobile #bio { left: 18px; top: 51px; width: 366px; font-size: 14px; }
 body.mobile #email { left: 18px; top: 105px; font-size: 16px; }
