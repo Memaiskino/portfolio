@@ -1,14 +1,9 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "reinisnalivaiko-portfolio",
+  // The live site is a Cloudflare PAGES project (direct upload, not git-connected).
+  // "name" must match the Pages project that owns reinisnalivaiko.me.
+  // Do not use `wrangler deploy` here — that publishes a Worker and leaves the site untouched.
+  "name": "portfolio",
   "compatibility_date": "2026-07-16",
-  "observability": {
-    "enabled": true
-  },
-  "assets": {
-    "directory": "./dist"
-  },
-  "compatibility_flags": [
-    "nodejs_compat"
-  ]
+  "pages_build_output_dir": "./dist"
 }

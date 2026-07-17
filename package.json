@@ -7,8 +7,8 @@
     "clean": "rm -rf dist",
     "build": "bash build.sh",
     "serve": "npx serve dist",
-    "deploy": "wrangler deploy",
-    "preview": "wrangler dev"
+    "deploy": "wrangler pages deploy dist --project-name=portfolio",
+    "preview": "wrangler pages dev dist"
   },
   "devDependencies": {
     "wrangler": "^4.111.0"
