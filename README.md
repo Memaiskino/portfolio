@@ -13,7 +13,7 @@ The files in this bundle are **design references created in HTML** — a working
 Both breakpoints are fixed-size artboards scaled to the viewport width:
 - **Desktop**: a 1920×13707 px frame. Content grid container at x=264, width 1391. Scale factor = min(1, viewportWidth/1920), applied as a CSS transform with origin 0 0; document height = frameHeight × scale.
 - **Mobile** (≤768px): a 402×14390 px frame. Grid container at x=−1, y=168. Scale = viewportWidth/402.
-- Every tile is absolutely positioned: `[x, y, w, h, src]`. The authoritative slot tables for both breakpoints are in `index.html` (`DESKTOP.slots`, `MOBILE.slots`) — copy them verbatim; do not re-derive or snap to a grid.
+- Every tile is absolutely positioned: `[x, y, w, h, src]`. The authoritative slot tables for both breakpoints are in `src/index.html` (`DESKTOP.slots`, `MOBILE.slots`) — copy them verbatim; do not re-derive or snap to a grid.
 - Media fills its slot with `object-fit: cover`.
 
 ## Header
@@ -47,5 +47,5 @@ All production assets live in `assets/final/` (images) and `assets/final/anim/` 
 - Add OG meta tags + favicon.
 
 ## Files
-- `index.html` — the complete design: both slot tables (DESKTOP/MOBILE), header, scaling and video logic.
+- `src/index.html` — the complete design: both slot tables (DESKTOP/MOBILE), header, scaling and video logic. `build.sh` copies it to `dist/index.html`, which is what Cloudflare serves.
 - `assets/final/**` — all production media referenced by the slot tables.
